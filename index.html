@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAY DETECTOR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #option1 {
+            background-color: #4CAF50; /* Green */
+        }
+        #option1:hover {
+            background-color: #45a049;
+        }
+        #option2 {
+            background-color: #2196F3; /* Blue */
+        }
+        #option2:hover {
+            background-color: #0b7dda;
+        }
+        #option3 {
+            background-color: #f44336; /* Red */
+        }
+        #option3:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Are You Gay?</h1>
+    <div class="options">
+        <button id="option1">Yupp</button>
+        <button id="option2">Ha Bilkul</button>
+        <button id="option3">Nope</button>
+    </div>
+
+    <script>
+        document.getElementById('option1').addEventListener('click', function() {
+            alert('Itna bhi sach nhi bolna tha😂');
+        });
+
+        document.getElementById('option2').addEventListener('click', function() {
+            alert('Confirm kar rha tha😂');
+        });
+
+        let option3 = document.getElementById('option3');
+        let clickCount = 0;
+        const messages = [
+            'Jhut mat bol',
+            'Maan le bhai',
+            'read the question again',
+            'sach bata de bhai..',
+            'Kitna jhut bolega',
+            'ab click kar',
+            'haa yrr I m gay'
+        ];
+
+        option3.addEventListener('click', function() {
+            if (clickCount < messages.length) {
+                option3.innerHTML = messages[clickCount];
+                clickCount++;
+            } else {
+                alert('😂😂 arey bhai tu to haar Maan gya');
+                option3.innerHTML = 'Nope';  // Reset the button text
+                clickCount = 0;  // Reset the counter
+            }
+        });
+    </script>
+
+</body></html>
